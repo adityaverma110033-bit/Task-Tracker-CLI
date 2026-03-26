@@ -47,3 +47,6 @@ If you prefer not to install the package globally, you can run the script direct
  info                   task-cli info 1
  help                   task-cli help
 
+## 🔗 Project URL
+View the source code and updates here: "https://github.com/adityaverma110033-bit/Task-Tracker-CLI"
+
