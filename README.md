@@ -33,11 +33,10 @@ A simple, efficient Command Line Interface (CLI) to manage your daily tasks, bui
 **Alternative**: Running without Installation
 If you prefer not to install the package globally, you can run the script directly using Python.
 ```PowerShell
-python task_cli.py add "Buy milk"
+   python task_cli.py add "Buy milk"
 
-
-##**📖 Usage**
-After installation, use the task-cli command:
+📖 Usage
+ After installation, use the task-cli command:
  ACTION                     COMMAND
  Add Task	            task-cli add "Finish homework"
  List All	            task-cli list
