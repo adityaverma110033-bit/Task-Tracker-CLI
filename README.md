@@ -36,7 +36,7 @@ If you prefer not to install the package globally, you can run the script direct
 python task_cli.py add "Buy milk"
 
 
-##📖 Usage
+##**📖 Usage**
 After installation, use the task-cli command:
  ACTION                     COMMAND
  Add Task	            task-cli add "Finish homework"
