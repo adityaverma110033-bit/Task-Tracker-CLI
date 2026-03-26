@@ -48,5 +48,5 @@ If you prefer not to install the package globally, you can run the script direct
  help                   task-cli help
 
 ## 🔗 Project URL
-View the source code and updates here: <https://github.com/adityaverma110033-bit/Task-Tracker-CLI>
+(https://roadmap.sh/projects/task-tracker)
 
