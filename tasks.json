@@ -1,1 +1,79 @@
-[]
+[
+    {
+        "ID": 1,
+        "Description": "Buy Groceries",
+        "status": "done",
+        "createdAt": "Mar 26, 16:17:35",
+        "updatedAt": "Mar 26, 16:32:43"
+    },
+    {
+        "ID": 2,
+        "Description": "buy clothes",
+        "status": "done",
+        "createdAt": "Mar 26, 16:17:49",
+        "updatedAt": "Mar 26, 16:33:00"
+    },
+    {
+        "ID": 3,
+        "Description": "visit client",
+        "status": "in-progress",
+        "createdAt": "Mar 26, 16:20:28",
+        "updatedAt": "Mar 26, 19:34:15"
+    },
+    {
+        "ID": 4,
+        "Description": "Take medicines",
+        "status": "in-progress",
+        "createdAt": "Mar 26, 16:20:52",
+        "updatedAt": "Mar 26, 16:33:32"
+    },
+    {
+        "ID": 5,
+        "Description": "work on project",
+        "status": "todo",
+        "createdAt": "Mar 26, 16:23:55",
+        "updatedAt": "Mar 26, 16:23:55"
+    },
+    {
+        "ID": 6,
+        "Description": "plan visit",
+        "status": "done",
+        "createdAt": "Mar 26, 16:25:05",
+        "updatedAt": "Mar 26, 16:35:28"
+    },
+    {
+        "ID": 7,
+        "Description": "learn recent topics",
+        "status": "in-progress",
+        "createdAt": "Mar 26, 16:25:56",
+        "updatedAt": "Mar 26, 16:33:44"
+    },
+    {
+        "ID": 8,
+        "Description": "prepae for Exams",
+        "status": "todo",
+        "createdAt": "Mar 26, 16:26:55",
+        "updatedAt": "Mar 26, 16:26:55"
+    },
+    {
+        "ID": 9,
+        "Description": "group discussion",
+        "status": "done",
+        "createdAt": "Mar 26, 16:27:44",
+        "updatedAt": "Mar 26, 16:36:01"
+    },
+    {
+        "ID": 10,
+        "Description": "meeting witb client",
+        "status": "todo",
+        "createdAt": "Mar 26, 19:30:03",
+        "updatedAt": "Mar 26, 19:30:41"
+    },
+    {
+        "ID": 11,
+        "Description": "visit client",
+        "status": "todo",
+        "createdAt": "Mar 26, 19:33:58",
+        "updatedAt": "Mar 26, 19:33:58"
+    }
+]
