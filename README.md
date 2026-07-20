@@ -17,11 +17,25 @@ A high-performance, and color-coded Command Line Interface (CLI) to seamlessly m
 
 ##  Installation & Global Setup
 
+### Option A: Running Locally (Quick Start)
+If you want to run the tool immediately inside the folder where you unzipped it, open your terminal in that folder. 
+*Note: Windows automatically handles executable files, so you **do not** need to type the `.exe` extension!*
+
+*   **On PowerShell (VS Code Default):** You must add a security prefix `.\` before the file name:
+    ```powershell
+    .\task-cli list
+    ```
+*   **On Command Prompt (cmd):** You can type the name directly:
+    ```cmd
+    task-cli list
+    ```
+### Option B: Global System Access (Recommended)
+
 ### Step 1: Download the Executable
 1. Download the `task-cli-windows.zip` bundle from the release page.
 2. Unzip the folder to extract the compiled standalone binary: `task-cli.exe`.
 
-### Step 2: Enable Global Access (Recommended)
+### Step 2: Enable Global Access
 To run the `task-cli` command seamlessly from any directory or terminal workspace on your computer without having to type the `.\` file prefix, add the file to your System PATH:
 
 1. Move the `task-cli.exe` file into a permanent, dedicated directory (e.g., `C:\Program Files\task-cli\`).
