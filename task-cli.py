@@ -169,44 +169,66 @@ def show_help():  # help function
     print(Fore.MAGENTA + "="*65 + "\n")
 
 def main():
-    if len(sys.argv) < 2:  # check if user have not given any task
-        show_help()  # calling help function for user convenience
+    if len(sys.argv) < 2:  # Check if user ran the tool completely blank
+        show_help()  
         return
     
-    command = sys.argv[1].lower() # convert commands in lower case for execution
+    command = sys.argv[1].lower()
 
     # 1. ADD COMMAND
     if command == "add":
         if len(sys.argv) < 3: 
-            print(Fore.RED + "Error: Please provide a task description.")
+            print(Fore.RED + "Error: Missing task description.")
+            print(Fore.YELLOW + 'Usage: task-cli add "Your task description"')
         else:
             add(sys.argv[2]) 
 
     # 2. UPDATE COMMAND
     elif command == "update":
         if len(sys.argv) < 4: 
-            print(Fore.YELLOW + "Usage: update [ID] [New Description]")
+            print(Fore.RED + "Error: Missing operational arguments.")
+            print(Fore.YELLOW + 'Usage: task-cli update [ID] "New Description"')
         else:
-            update(int(sys.argv[2]), sys.argv[3]) 
+            try:
+                update(int(sys.argv[2]), sys.argv[3]) 
+            except ValueError:
+                print(Fore.RED + "Error: ID must be a number.")
+                print(Fore.YELLOW + 'Usage: task-cli update [ID] "New Description"')
 
     # 3. DELETE COMMAND
     elif command == "delete":
         if len(sys.argv) < 3:
-            print(Fore.YELLOW + "Usage: delete [ID]")
+            print(Fore.RED + "Error: Missing task ID.")
+            print(Fore.YELLOW + 'Usage: task-cli delete [ID]')
         else:
-            delete(int(sys.argv[2]))
+            try:
+                delete(int(sys.argv[2]))
+            except ValueError:
+                print(Fore.RED + "Error: ID must be a number.")
+                print(Fore.YELLOW + 'Usage: task-cli delete [ID]')
 
     # 4. MARK COMMANDS
     elif command == "mark-in-progress":
         if len(sys.argv) < 3:
-            print(Fore.YELLOW + "Usage: mark-in-progress [ID]")
+            print(Fore.RED + "Error: Missing task ID.")
+            print(Fore.YELLOW + 'Usage: task-cli mark-in-progress [ID]')
         else:
-            mark("in-progress", int(sys.argv[2])) 
+            try:
+                mark("in-progress", int(sys.argv[2])) 
+            except ValueError:
+                print(Fore.RED + "Error: ID must be a number.")
+                print(Fore.YELLOW + 'Usage: task-cli mark-in-progress [ID]')
+                
     elif command == "mark-done":
         if len(sys.argv) < 3:
-            print(Fore.YELLOW + "Usage: mark-done [ID]")
+            print(Fore.RED + "Error: Missing task ID.")
+            print(Fore.YELLOW + 'Usage: task-cli mark-done [ID]')
         else:
-            mark("done", int(sys.argv[2]))
+            try:
+                mark("done", int(sys.argv[2]))
+            except ValueError:
+                print(Fore.RED + "Error: ID must be a number.")
+                print(Fore.YELLOW + 'Usage: task-cli mark-done [ID]')
 
     # 5. LIST COMMANDS
     elif command == "list":
@@ -218,15 +240,23 @@ def main():
     # 6. INFO COMMAND
     elif command == "info":
         if len(sys.argv) < 3: 
-            print(Fore.YELLOW + "Usage: info [ID]")
+            print(Fore.RED + "Error: Missing task ID.")
+            print(Fore.YELLOW + 'Usage: task-cli info [ID]')
         else:
-            info_task(int(sys.argv[2])) 
+            try:
+                info_task(int(sys.argv[2])) 
+            except ValueError:
+                print(Fore.RED + "Error: ID must be a number.")
+                print(Fore.YELLOW + 'Usage: task-cli info [ID]')
     
-    # 7. HELP COMMAND
+    # 7. HELP COMMMAND
     elif command == "help": 
         show_help() 
+        
+    # 8. COMPLETELY UNKNOWN COMMAND
     else:
         print(Fore.RED + f"Unknown command: '{command}'") 
+        print(Fore.YELLOW + "Type 'task-cli help' to see all available commands.")
 
 if __name__ == "__main__":
     main()
